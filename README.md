@@ -1,188 +1,22 @@
-# ⬆️ Amazon Web Services Certified (AWS Certified) Cloud Practitioner (CLF-C02) Practice Tests Exams Questions & Answers
+# ☁️ AWS Certified Cloud Practitioner (CLF-C02) - Simulador Interactivo
 
-![Promotional image](images/promotional.png)
+¡Bienvenido al Simulador Oficial Offline para prepararte para el examen de AWS Certified Cloud Practitioner! 
 
-## ❣️ Support
+Este repositorio incluye una potente aplicación web estilo SPA que funciona 100% offline, permitiéndote tomar simulacros de examen de 65 preguntas, ver retroalimentación estricta y estudiar con flascards de aprendizaje. Todo propulsado por una inmensa base de conocimientos con casi 600 preguntas oficiales.
 
-There are many ways to support us; in exchange, you'll get this material in a proper format:
+> **¡Agradecimientos y Créditos Especiales!** 🙌
+> Toda la extensa e increíble base de datos de preguntas y respuestas correctas fue bifurcada (forked) del excelente y exhaustivo trabajo original de **Ditectrev**. ¡Mil gracias por el impacto OpenSource aportado a la comunidad que inspiró esta plataforma!
 
-- ❤️ [shop.ditectrev.com, in EPUB or PDF formats, with answers marked](https://shop.ditectrev.com/product/amazon-web-services-certified-aws-certified-cloud-practitioner-clf-c02-practice-tests-exams-questions-answers),
-- ❤️ [shop.ditectrev.com, in EPUB or PDF formats, without answers marked](https://shop.ditectrev.com/product/amazon-web-services-certified-aws-certified-cloud-practitioner-clf-c02-practice-tests-exams-questions-no-answers),
-- 📖 [Udemy is the only one to have explanations for questions](https://www.udemy.com/course/aws-cloud-practitioner-clf-C01-practice-tests-exams/?referralCode=5FA00571456CA3B6E16D),
-- 📚 [Google Play Books, in PDF format, with answers marked](https://play.google.com/store/books/details?id=OB4UEQAAQBAJ),
-- 📚 [Google Play Books, in PDF format, without answers marked](https://play.google.com/store/books/details?id=Oh4UEQAAQBAJ),
-- 🛍️ [Etsy, in PDF format, with answers marked](https://ditectrev.etsy.com/listing/1363743302),
-- 🛍️ [Etsy, in PDF format, without answers marked](https://ditectrev.etsy.com/listing/1492654048),
-- 🛒 [eBay, in PDF format, with answers marked](https://ebay.us/m/MQwNu9),
-- 🛒 [eBay, in PDF format, without answers marked](https://ebay.us/m/7cwRTA),
-- 🔄 [Patreon subscription allows you to get access to all of the materials in EPUB and PDF formats. You can also buy separate items on Patreon, but the subscription technically allows us to include all updates for EPUB and PDF formats. Hence, you get EPUB and PDF updates when you subscribe to Patreon](https://patreon.com/Ditectrev?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink).
+## 🚀 Cómo Usar el Simulador
 
-💰 If you work for a company, you could probably easily claim this expense while preparing for your exam. For us, it's about being in the game or not.
+1. **Inicia:** Clona este repositorio o descárgalo en `.zip`.
+2. **Ejecuta:** Haz un simple y veloz doble clic en el archivo `index.html`. 
+3. **Disfruta:** La plataforma interactiva abrirá en tu navegador de preferencia. No necesitas bases de datos, librerías, servidores, ni instalaciones previas. ¡Diseñado para la velocidad pura!
 
-⭐ Good ratings & reviews help us to survive. Please don't forget to leave a nice one when you purchase an item.
+A continuación, la estructura de base de datos plana donde residen las cientos de preguntas que dan vida al Simulador Dinámico:
 
-## 👩‍💻 & 👨‍💻 Interactive Course(s)
+---
 
-It's great to learn these questions as your exam preparation, and, yes, you should pass just based on that. However, we highly recommend more interactive learning if you want to become an expert. Currently, we're recommending those courses:
-
-- 🎬 [Coursera: video-based, official course by Amazon Web Services (AWS)](https://imp.i384100.net/APb5ZJ).
-- 📖 [Educative: text-based, video-free course, including set up out-of-the-box for you Cloud Labs to practice hands-on without the need to set up an environment (and payments). The link includes the highest available discount Educative offers](https://www.educative.io/courses/aws-certified-cloud-practitioner-exam?aff=VALz).
-
-Yes, we have a little commission from these links. Therefore, by using these links, you're supporting us.
-
-## ✨ This course is unlike any Amazon Web Services Certified (AWS Certified) Cloud Practitioner (CLF-C02) course you will find online.
-
-✋ Join a live online community and a course taught by industry experts and pass the Amazon Web Services Certified (AWS Certified) Cloud Practitioner (CLF-C02) confidently. We aim to build an ecosystem of Information Technology (IT) certifications and online courses in cooperation with the technology industry. We believe it will give our students 100% confidence in the pacing market in an open-source environment. We are just at the beginning of our way, so it's even better for you to join now!
-
-[![Join our Discord](images/discord.png 'Join our Discord')](https://discord.gg/RFjtXKfJy3)
-
-## ⌛️ Short and to the point; why should you take the course:
-
-1. Always happy to answer your questions on Udemy's Q&A's and outside :)
-2. Failed? Please submit a screenshot of your exam result and request a refund (via our upcoming platform, not possible on Udemy); we'll always accept it.
-3. Learn about topics, such as:
-   - Access Control;
-   - Amazon Aurora;
-   - Amazon CloudFront;
-   - Amazon CloudWatch;
-   - Amazon Connect;
-   - Amazon DynamoDB;
-   - Amazon Elastic Block Store (Amazon EBS);
-   - Amazon Elastic Compute Cloud (Amazon EC2);
-   - Amazon Elastic Map Reduce (Amazon EMR);
-   - Amazon Inspector;
-   - Amazon Redshift;
-   - Amazon Relational Database Service (Amazon RDS);
-   - Amazon Simple Storage Service (Amazon S3);
-   - Authentication & Authorization;
-   - Availability Zones;
-   - AWS Budgets;
-   - AWS CloudFormation;
-   - AWS CloudTrail;
-   - AWS Command Line Interface (AWS CLI);
-   - AWS Cost Explorer;
-   - AWS Direct Connect;
-   - AWS Health Dashboard;
-   - AWS Identity and Access Management (AWS IAM);
-   - AWS Key Management Service (AWS KMS);
-   - AWS Lambda;
-   - AWS Pricing Calculator;
-   - AWS Trusted Advisor;
-   - AWS Web Application Firewall (AWS WAF);
-   - Capital Expenditure (CapEx) & Operational Expenditure (OpEx);
-   - Cloud Concepts;
-   - Compliancy, Governance, Identity & Privacy;
-   - Inbound Data Traffic & Outbound Data Traffic;
-   - Infrastructure as a Service (IaaS);
-   - Platform as a Service (PaaS);
-   - Public & Private Cloud;
-   - Resource Groups;
-   - Serverless;
-   - Service Level Agreement (SLA);
-   - Software as a Service (SaaS);
-   - Virtual Private Clouds (VPC);
-   - **Much More!**
-4. Questions are similar to the actual exam, without duplications (like in other courses ;-)).
-5. The Practice Tests Exams simulate the actual exam's content, timing, and percentage required to pass the exam.
-6. This course is **not** an Amazon Web Services Certified (AWS Certified) Cloud Practitioner (CLF-C02) Exam Dump. Some people use brain dumps or exam dumps, but that's absurd, which we don't practice.
-7. 597 **unique** questions.
-
-## ☝️ Course Updates
-
-**[v1.0.0](../../releases/tag/v1.0.0): December 7, 2022.**
-
-- Launch of the course.
-
-**[v1.1.0](../../releases/tag/v1.1.0): January 8, 2023.**
-
-- Fix several questions with minor improvements.
-
-**[v1.1.1](../../releases/tag/v1.1.1): March 7, 2023.**
-
-- Fix several typos.
-
-**[v1.1.2](../../releases/tag/v1.1.2): June 19, 2023.**
-
-- Fix 1 question correct answer.
-
-**[v1.1.3](../../releases/tag/v1.1.3): July 13, 2023.**
-
-- Fix 1 question correct answer and several typos.
-
-**[v1.1.4](../../releases/tag/v1.1.4): August 14, 2023.**
-
-- Remove from 2 answers '(Correct)' word.
-
-**[v1.2.0](../../releases/tag/v1.2.0): October 2, 2023.**
-
-- Add 2 new questions and fix 6 questions with incorrect answers.
-
-**[v1.2.1](../../releases/tag/v1.2.1): November 22, 2023.**
-
-- Fix all remaining typos with support of automated proofreading software.
-
-**[v1.2.2](../../releases/tag/v1.2.2): April 11, 2024.**
-
-- Fix 1 question with a wrong answer.
-
-**[v1.2.3](../../releases/tag/v1.2.3): June 10, 2024.**
-
-- Fix 1 question with a wrong answer.
-
-**[v1.3.0](../../releases/tag/v1.3.0): July 15, 2024.**
-
-- Fix 23 questions with wrong answers.
-
-**[v1.3.0](../../releases/tag/v1.3.0): August 8, 2024.**
-
-- AI-generated explanations (only paid [Udemy](https://www.udemy.com/course/aws-cloud-practitioner-clf-C01-practice-tests-exams/?referralCode=5FA00571456CA3B6E16D)).
-
-**[v1.4.0](../../releases/tag/v1.4.0): November 15, 2024.**
-
-- Fix 7 questions with wrong answers, delete 2 duplicate, add 2 new questions, and minor formatting improvements.
-
-**[v1.4.1](../../releases/tag/v1.4.1): May 9, 2025.**
-
-- Minor formatting improvement for 3 questions.
-
-**[v1.4.2](../../releases/tag/v1.4.2): November 12, 2025.**
-
-- Fix 6 questions with wrong answers, and 1 minor typo.
-
-## 🙋‍♀️ & 🙋‍♂️ Contribution
-
-We are so thankful for every contribution, which makes sure we can deliver top-notch content. Whenever you find a missing resource, broken link in a [Table of Contents](#table-of-contents), the wrong answer, please submit an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls).
-
-## Who this course is for:
-
-- 👨‍🎓 Students preparing for the Amazon Web Services Certified (AWS Certified) Cloud Practitioner (CLF-C02) Exam;
-- 👨‍🎓 AWS Engineers;
-- 👨‍🎓 Azure Engineers;
-- 👨‍🎓 Cloud Architects;
-- 👨‍🎓 Cloud Engineers;
-- 👨‍🎓 DevOps Engineers;
-- 👨‍🎓 Enterprise Architects;
-- 👨‍🎓 Google Cloud Platform (GCP) Engineers;
-- 👨‍🎓 Infrastructure Engineers;
-- 👨‍🎓 IT Professionals;
-- 👨‍🎓 Lead Engineers;
-- 👨‍🎓 Product Architects;
-- 👨‍🎓 Product Managers;
-- 👨‍🎓 Product Owners;
-- 👨‍🎓 Project Managers;
-- 👨‍🎓 Scrum Masters;
-- 👨‍🎓 Security Engineers;
-- 👨‍🎓 Site Reliability Engineers;
-- 👨‍🎓 Software Developers/Engineers;
-- 👨‍🎓 Software Testers;
-- 👨‍🎓 Solution Architects;
-- 👨‍🎓 Team Leaders.
-
-## Requirements
-
-- 🤩 Excitement to learn!
-- 0️⃣ Prior knowledge is required;
-- ✅ You can pass the Amazon Web Services Certified (AWS Certified) Cloud Practitioner (CLF-C02) Exam solely based on our Practice Tests Exams.
 
 ## Table of Contents
 
