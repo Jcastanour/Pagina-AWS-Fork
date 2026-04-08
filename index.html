@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner V2 - Training App</title>
+    <!-- Referencia al CSS Modularizado V2 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark-theme">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+        <div class="sidebar-header">
+            <h2>AWS <span>Training</span></h2>
+        </div>
+        <ul id="sidebar-nav">
+            <!-- Rellenado dinámicamente por ui.js -->
+        </ul>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <div id="main-wrapper">
+        <header id="topbar">
+            <div>
+                <input type="text" id="search-input" placeholder="🔍 Buscar S3, Base de datos, IAM..." autocomplete="off">
+            </div>
+            <div class="topbar-progress">
+                <span title="Modo Claro/Oscuro" style="cursor:pointer; font-size:1.2rem; margin-right:15px" onclick="toggleThemeUI()">🌓</span>
+                <span>Progreso Local:</span>
+                <div class="progress-container">
+                    <div id="progress-bar-fill" style="height:100%; width:0%; background:var(--green); transition:0.3s"></div>
+                </div>
+                <span id="progress-text" style="color:var(--green)">0%</span>
+            </div>
+        </header>
+
+        <!-- Aquí se inyectan las VISTAS de ui.js / quiz.js / flashcards.js -->
+        <main id="main-content-area">
+            <!-- Render dinámico inicial Home Dashboard -->
+        </main>
+        
+        <!-- Banner de Creditos Footer -->
+        <footer style="text-align:center; padding:15px; background:var(--panel); border-top:1px solid var(--border); font-size:0.85rem">
+            <p style="margin:0; color:var(--text-muted)">
+                🚀 Plataforma impulsada con el Fork: 
+                <a href="https://github.com/Jcastanour/Pagina-AWS-Fork.git" target="_blank" style="color:var(--accent); text-decoration:none; font-weight:bold;">
+                    Jcastanour/Pagina-AWS-Fork
+                </a>
+                <br>Basado en el repositorio OpenSource original de Ditectrev. ¡A por esa certificación!
+            </p>
+        </footer>
+    </div>
+
+<!-- Carga de Scripts Módulos de Forma Secuencial para máxima compatibilidad Offline sin Servidor -->
+<script src="js/data.js"></script>
+<script src="js/data-exams.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/search.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/flashcards.js"></script>
+<script src="js/ui.js"></script>
+
+</body>
+</html>
