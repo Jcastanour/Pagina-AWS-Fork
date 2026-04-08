@@ -2,8 +2,30 @@
 // Sistema interactivo de Flashcards
 
 let curCardIdx = 0;
+let fcDeck = [];
+
+// Construye el mazo de flashcards a partir de la BD oficial de exámenes (dataExamsMaster)
+function buildFlashcardsDeck() {
+    const source = (typeof dataExamsMaster !== 'undefined' && Array.isArray(dataExamsMaster)) ? dataExamsMaster : [];
+    fcDeck = source.map(item => {
+        const correctTexts = (item.answers || [])
+            .map(i => item.options[i])
+            .filter(Boolean)
+            .join("\n• ");
+        return {
+            q: item.q,
+            a: "• " + correctTexts
+        };
+    });
+    // Mezclar para variedad en cada sesión
+    for (let i = fcDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [fcDeck[i], fcDeck[j]] = [fcDeck[j], fcDeck[i]];
+    }
+}
 
 function renderFlashcardsApp() {
+    buildFlashcardsDeck();
     const mainArea = document.getElementById("main-content-area");
     
     let html = `
@@ -46,9 +68,9 @@ function updateFcUI() {
     cardEl.classList.remove('flipped');
     
     setTimeout(() => {
-        document.getElementById("fcq").innerText = dataFlashcards[curCardIdx].q;
-        document.getElementById("fca").innerText = dataFlashcards[curCardIdx].a;
-        document.getElementById("fcc").innerText = (curCardIdx + 1) + " / " + dataFlashcards.length;
+        document.getElementById("fcq").innerText = fcDeck[curCardIdx].q;
+        document.getElementById("fca").innerText = fcDeck[curCardIdx].a;
+        document.getElementById("fcc").innerText = (curCardIdx + 1) + " / " + fcDeck.length;
         
         // Actualizar métricas visuales
         const stats = AppStorage.getFlashcardsStats();
@@ -62,7 +84,7 @@ function scoreCard(isEasy) {
     
     // Moverse al siguiente
     curCardIdx++;
-    if(curCardIdx >= dataFlashcards.length) {
+    if(curCardIdx >= fcDeck.length) {
         // En un SRS real acá se calcularían las fechas, aquí solo damos un alert y reiniciamos
         alert("¡Mazo Terminado! Volver a empezar.");
         curCardIdx = 0;
