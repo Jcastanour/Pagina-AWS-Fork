@@ -9,6 +9,11 @@ Este repositorio incluye una potente aplicación web estilo SPA que funciona 100
 
 ## 🚀 Cómo Usar el Simulador
 
+**Opción A: Simulador en tu Navegador (Recomendado)**
+🌐 Puedes probar y usar este simulador inmediatamente y gratis sin descargar nada haciendo clic aquí: 
+[https://jcastanour.github.io/Pagina-AWS-Fork/](https://jcastanour.github.io/Pagina-AWS-Fork/)
+
+**Opción B: Usar Offline en tu PC**
 1. **Inicia:** Clona este repositorio o descárgalo en `.zip`.
 2. **Ejecuta:** Haz un simple y veloz doble clic en el archivo `index.html`. 
 3. **Disfruta:** La plataforma interactiva abrirá en tu navegador de preferencia. No necesitas bases de datos, librerías, servidores, ni instalaciones previas. ¡Diseñado para la velocidad pura!
