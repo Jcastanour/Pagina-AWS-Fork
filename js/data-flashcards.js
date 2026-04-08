@@ -1,0 +1,186 @@
+// Flashcards generadas a partir de dataExamsMaster
+// Front: concepto/caso de uso en español
+// Back: servicio AWS en inglés (+ explicación opcional en español)
+
+const dataFlashcards = [
+    // ===== Compute =====
+    { q: "Servidores virtuales en la nube con control total del SO. Modelo IaaS.", a: "Amazon EC2 (Elastic Compute Cloud)" },
+    { q: "Servicio de cómputo serverless para ejecutar código sin aprovisionar servidores; se paga por tiempo de ejecución.", a: "AWS Lambda" },
+    { q: "Plantilla preconfigurada para lanzar instancias EC2 idénticas (SO, software, configuración).", a: "Amazon Machine Image (AMI)" },
+    { q: "Servicio para orquestar contenedores Docker en un clúster de instancias EC2 (administrado por AWS).", a: "Amazon ECS (Elastic Container Service)" },
+    { q: "Servicio Kubernetes administrado en AWS.", a: "Amazon EKS (Elastic Kubernetes Service)" },
+    { q: "Motor de cómputo serverless para contenedores; ejecuta ECS/EKS sin gestionar servidores.", a: "AWS Fargate" },
+    { q: "Registro privado de imágenes de contenedores Docker.", a: "Amazon ECR (Elastic Container Registry)" },
+    { q: "PaaS para desplegar y escalar aplicaciones web automáticamente subiendo solo el código.", a: "AWS Elastic Beanstalk" },
+    { q: "Servicio simple para lanzar servidores virtuales preconfigurados a precio fijo mensual (ideal para pequeñas apps/blogs).", a: "Amazon Lightsail" },
+    { q: "Servicio para ejecutar trabajos por lotes (batch) a cualquier escala.", a: "AWS Batch" },
+    { q: "Servidores físicos dedicados que permiten usar licencias de software bring-your-own-license (BYOL).", a: "Amazon EC2 Dedicated Hosts" },
+    { q: "Opción de compra de EC2 con descuento de hasta 90% para cargas tolerantes a interrupciones.", a: "Amazon EC2 Spot Instances" },
+    { q: "Opción de compra EC2 con compromiso de 1 o 3 años para reducir costos hasta 75%.", a: "Amazon EC2 Reserved Instances" },
+    { q: "Tipo de Reserved Instance que permite cambiar el tipo de instancia durante el plazo.", a: "Convertible Reserved Instances" },
+    { q: "Pago por hora/segundo sin compromiso, ideal para cargas impredecibles o de corta duración.", a: "Amazon EC2 On-Demand Instances" },
+    { q: "Modelo de precios flexible para reducir costos en EC2, Fargate y Lambda comprometiéndose a un uso por hora durante 1 o 3 años.", a: "AWS Savings Plans" },
+    { q: "Infraestructura AWS local en las instalaciones del cliente (extensión on-premises de AWS).", a: "AWS Outposts" },
+    { q: "Escalado automático horizontal de capacidad de cómputo según la demanda.", a: "AWS Auto Scaling / EC2 Auto Scaling" },
+
+    // ===== Storage =====
+    { q: "Almacenamiento de objetos altamente duradero (11 nueves) y escalable; ideal para fotos, videos, backups.", a: "Amazon S3 (Simple Storage Service)" },
+    { q: "Clase S3 para datos con patrones de acceso impredecibles que mueve objetos automáticamente entre niveles.", a: "Amazon S3 Intelligent-Tiering" },
+    { q: "Clase S3 de archivado a muy bajo costo para datos rara vez accedidos (recuperación en minutos a horas).", a: "Amazon S3 Glacier Flexible Retrieval" },
+    { q: "Clase S3 más económica para archivado de largo plazo (7-10 años), recuperación en horas.", a: "Amazon S3 Glacier Deep Archive" },
+    { q: "Clase S3 estándar para datos accedidos con frecuencia.", a: "Amazon S3 Standard" },
+    { q: "Clase S3 para datos accedidos con poca frecuencia pero con acceso rápido cuando se necesita.", a: "Amazon S3 Standard-IA (Infrequent Access)" },
+    { q: "Función que acelera las cargas a S3 usando edge locations de CloudFront.", a: "Amazon S3 Transfer Acceleration" },
+    { q: "Almacenamiento en bloque persistente conectado a instancias EC2 (como discos duros virtuales).", a: "Amazon EBS (Elastic Block Store)" },
+    { q: "Copia de seguridad puntual de un volumen EBS, almacenada en S3.", a: "EBS Snapshots" },
+    { q: "Sistema de archivos compartido NFS escalable para múltiples instancias EC2 Linux.", a: "Amazon EFS (Elastic File System)" },
+    { q: "Sistema de archivos administrado para Windows o cargas de alto rendimiento (Lustre, NetApp ONTAP).", a: "Amazon FSx" },
+    { q: "Servicio híbrido que conecta el almacenamiento on-premises con AWS para backups, archivado y caché.", a: "AWS Storage Gateway" },
+    { q: "Dispositivo físico para transferir grandes volúmenes (TBs/PBs) de datos a AWS; incluye cómputo local opcional.", a: "AWS Snowball / Snowball Edge" },
+    { q: "Camión articulado para transferir hasta 100 PB de datos a AWS.", a: "AWS Snowmobile" },
+    { q: "Servicio de backup centralizado para múltiples servicios AWS (EBS, RDS, DynamoDB, EFS, etc.).", a: "AWS Backup" },
+
+    // ===== Database =====
+    { q: "Servicio de base de datos relacional administrada (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server).", a: "Amazon RDS (Relational Database Service)" },
+    { q: "Base de datos relacional compatible con MySQL/PostgreSQL, hasta 5x más rápida, diseñada por AWS.", a: "Amazon Aurora" },
+    { q: "Base de datos NoSQL clave-valor, serverless, latencia de un dígito en ms, multi-AZ por defecto.", a: "Amazon DynamoDB" },
+    { q: "Capa de caché en memoria DAX que acelera DynamoDB hasta 10x.", a: "Amazon DynamoDB Accelerator (DAX)" },
+    { q: "Almacén de datos (data warehouse) petabyte-scale para analítica y BI.", a: "Amazon Redshift" },
+    { q: "Caché en memoria administrado (Redis o Memcached) para mejorar el rendimiento de aplicaciones de lectura intensiva.", a: "Amazon ElastiCache" },
+    { q: "Base de datos administrada compatible con MongoDB para documentos JSON.", a: "Amazon DocumentDB" },
+    { q: "Base de datos de grafos administrada para relaciones complejas (redes sociales, motores de recomendación).", a: "Amazon Neptune" },
+    { q: "Base de datos de series temporales administrada.", a: "Amazon Timestream" },
+    { q: "Base de datos ledger inmutable y criptográficamente verificable.", a: "Amazon QLDB (Quantum Ledger Database)" },
+    { q: "Característica RDS que crea una copia sincrónica en otra AZ para alta disponibilidad y failover automático.", a: "RDS Multi-AZ Deployment" },
+    { q: "Característica RDS que crea copias asincrónicas de solo lectura para escalar lecturas.", a: "RDS Read Replicas" },
+    { q: "Servicio para migrar bases de datos a AWS con tiempo de inactividad mínimo.", a: "AWS Database Migration Service (DMS)" },
+    { q: "Herramienta para convertir esquemas y código entre motores de base de datos diferentes.", a: "AWS Schema Conversion Tool (SCT)" },
+
+    // ===== Networking & Content Delivery =====
+    { q: "Red virtual privada y aislada dedicada a una cuenta AWS.", a: "Amazon VPC (Virtual Private Cloud)" },
+    { q: "Servicio de DNS escalable y altamente disponible en AWS.", a: "Amazon Route 53" },
+    { q: "Red de entrega de contenido (CDN) global con caché en edge locations.", a: "Amazon CloudFront" },
+    { q: "Conexión de red privada y dedicada entre el data center on-premises y AWS.", a: "AWS Direct Connect" },
+    { q: "Conexión cifrada IPsec a través de internet entre on-premises y AWS VPC.", a: "AWS Site-to-Site VPN" },
+    { q: "Distribuye tráfico entrante entre múltiples instancias para alta disponibilidad.", a: "Elastic Load Balancing (ELB)" },
+    { q: "Mejora el rendimiento global enrutando tráfico por la red troncal de AWS hasta los edge locations.", a: "AWS Global Accelerator" },
+    { q: "Servicio para crear, publicar y administrar APIs REST/HTTP/WebSocket a escala.", a: "Amazon API Gateway" },
+    { q: "Hub central que conecta múltiples VPCs y redes on-premises.", a: "AWS Transit Gateway" },
+    { q: "Firewall a nivel de instancia EC2 que controla el tráfico entrante y saliente (stateful).", a: "Security Groups" },
+    { q: "Firewall sin estado a nivel de subred dentro de una VPC.", a: "Network ACLs (NACL)" },
+    { q: "Captura información sobre el tráfico IP que entra y sale de las interfaces de red en una VPC.", a: "VPC Flow Logs" },
+
+    // ===== Security, Identity & Compliance =====
+    { q: "Servicio para crear y administrar usuarios, grupos, roles y permisos en AWS (gratis).", a: "AWS IAM (Identity and Access Management)" },
+    { q: "Mejor práctica de IAM: otorgar solo los permisos mínimos necesarios.", a: "Principle of Least Privilege" },
+    { q: "Capa adicional de seguridad que requiere un segundo factor además de la contraseña.", a: "AWS MFA (Multi-Factor Authentication)" },
+    { q: "Servicio administrado para crear y controlar claves de cifrado.", a: "AWS KMS (Key Management Service)" },
+    { q: "Módulo de seguridad de hardware (HSM) dedicado en la nube para cumplimiento.", a: "AWS CloudHSM" },
+    { q: "Firewall de aplicaciones web que protege contra SQL injection, XSS y exploits comunes.", a: "AWS WAF (Web Application Firewall)" },
+    { q: "Protección contra ataques DDoS; Standard es gratis, Advanced es pago.", a: "AWS Shield" },
+    { q: "Detección inteligente de amenazas mediante análisis de logs (CloudTrail, VPC Flow Logs, DNS).", a: "Amazon GuardDuty" },
+    { q: "Evaluación automática de vulnerabilidades en EC2 y aplicaciones.", a: "Amazon Inspector" },
+    { q: "Descubre y protege datos sensibles (PII) almacenados en S3 mediante machine learning.", a: "Amazon Macie" },
+    { q: "Investigación visual rápida de la causa raíz de problemas de seguridad usando datos de GuardDuty/VPC.", a: "Amazon Detective" },
+    { q: "Almacena, rota y recupera secretos como credenciales de bases de datos y API keys.", a: "AWS Secrets Manager" },
+    { q: "Almacén jerárquico de configuración y secretos (parámetros) integrado con Systems Manager.", a: "AWS Systems Manager Parameter Store" },
+    { q: "Servicio de identidad y autenticación de usuarios para apps web y móviles (sign-up/sign-in, federación).", a: "Amazon Cognito" },
+    { q: "Acceso a documentos de cumplimiento y acuerdos de AWS (SOC, PCI, ISO).", a: "AWS Artifact" },
+    { q: "Aprovisiona, administra y despliega certificados SSL/TLS gratis.", a: "AWS Certificate Manager (ACM)" },
+    { q: "Servicio centralizado para administrar políticas de firewall y reglas WAF en múltiples cuentas.", a: "AWS Firewall Manager" },
+    { q: "Servicio centralizado de hallazgos de seguridad de múltiples servicios AWS.", a: "AWS Security Hub" },
+
+    // ===== Management & Governance =====
+    { q: "Monitorea métricas, logs y eventos de recursos y aplicaciones AWS; permite crear alarmas.", a: "Amazon CloudWatch" },
+    { q: "Registra todas las llamadas API en la cuenta AWS para auditoría y gobernanza.", a: "AWS CloudTrail" },
+    { q: "Evalúa, audita y supervisa la configuración de los recursos AWS frente a reglas deseadas.", a: "AWS Config" },
+    { q: "Servicio que inspecciona el entorno AWS y entrega recomendaciones en 5 categorías: costo, rendimiento, seguridad, tolerancia a fallos y límites.", a: "AWS Trusted Advisor" },
+    { q: "Infraestructura como código mediante plantillas declarativas (JSON/YAML).", a: "AWS CloudFormation" },
+    { q: "Gestión centralizada de múltiples cuentas AWS, facturación consolidada y SCPs.", a: "AWS Organizations" },
+    { q: "Configura y gobierna automáticamente un entorno seguro multi-cuenta basado en mejores prácticas.", a: "AWS Control Tower" },
+    { q: "Permite crear y administrar catálogos de productos aprobados para usar en AWS dentro de una organización.", a: "AWS Service Catalog" },
+    { q: "Permite operar, parchear y configurar instancias EC2 y on-premises a escala.", a: "AWS Systems Manager" },
+    { q: "Automatización de la configuración de servidores usando recetas Chef y Puppet.", a: "AWS OpsWorks" },
+    { q: "Vista personalizada del estado de los servicios AWS que afectan tu cuenta.", a: "AWS Health Dashboard / Personal Health Dashboard" },
+    { q: "Plantillas de despliegue de soluciones populares creadas por arquitectos AWS para implementación rápida.", a: "AWS Quick Start" },
+    { q: "Marco con 6 pilares: excelencia operativa, seguridad, fiabilidad, eficiencia del rendimiento, optimización de costos y sostenibilidad.", a: "AWS Well-Architected Framework" },
+    { q: "Herramienta para revisar tus cargas frente al Well-Architected Framework.", a: "AWS Well-Architected Tool" },
+    { q: "Servicio para mover y desplegar aplicaciones a AWS sin reescribirlas.", a: "AWS Application Migration Service (MGN)" },
+    { q: "Hub central para rastrear el progreso de migraciones a AWS.", a: "AWS Migration Hub" },
+    { q: "Recopila información sobre los servidores on-premises para planificar la migración.", a: "AWS Application Discovery Service" },
+
+    // ===== Cost Management =====
+    { q: "Visualiza y analiza el gasto y el uso de AWS a lo largo del tiempo.", a: "AWS Cost Explorer" },
+    { q: "Permite establecer presupuestos personalizados y recibir alertas cuando los costos o el uso superan umbrales.", a: "AWS Budgets" },
+    { q: "Estima por adelantado el costo mensual de una arquitectura AWS antes de desplegarla.", a: "AWS Pricing Calculator" },
+    { q: "Reportes detallados y granulares de costos y uso de AWS.", a: "AWS Cost and Usage Report (CUR)" },
+    { q: "Proporciona créditos gratuitos durante 12 meses o siempre, según el servicio.", a: "AWS Free Tier" },
+    { q: "Etiquetas que permiten asignar y rastrear costos por proyecto, departamento o entorno.", a: "Cost Allocation Tags" },
+
+    // ===== Application Integration =====
+    { q: "Cola de mensajes administrada para desacoplar componentes de aplicaciones distribuidas.", a: "Amazon SQS (Simple Queue Service)" },
+    { q: "Servicio de notificaciones pub/sub para enviar mensajes a múltiples suscriptores (email, SMS, Lambda, SQS).", a: "Amazon SNS (Simple Notification Service)" },
+    { q: "Servicio de envío de correo electrónico transaccional y de marketing.", a: "Amazon SES (Simple Email Service)" },
+    { q: "Bus de eventos serverless que conecta aplicaciones mediante eventos.", a: "Amazon EventBridge" },
+    { q: "Orquestador serverless de flujos de trabajo (state machines) que coordina servicios AWS.", a: "AWS Step Functions" },
+    { q: "Servicio de broker de mensajes administrado compatible con ActiveMQ y RabbitMQ.", a: "Amazon MQ" },
+
+    // ===== Analytics =====
+    { q: "Servicio de Hadoop/Spark administrado para procesamiento de big data.", a: "Amazon EMR (Elastic MapReduce)" },
+    { q: "Consulta datos directamente en S3 usando SQL estándar; serverless.", a: "Amazon Athena" },
+    { q: "Servicio ETL serverless para preparar y cargar datos para analítica.", a: "AWS Glue" },
+    { q: "Plataforma para recopilar, procesar y analizar datos de streaming en tiempo real.", a: "Amazon Kinesis" },
+    { q: "Servicio de business intelligence (BI) para crear visualizaciones y dashboards.", a: "Amazon QuickSight" },
+    { q: "Servicio para crear y compartir lagos de datos seguros con facilidad.", a: "AWS Lake Formation" },
+    { q: "Servicio gestionado de búsqueda y análisis basado en Elasticsearch/OpenSearch.", a: "Amazon OpenSearch Service" },
+
+    // ===== Developer Tools =====
+    { q: "Repositorio Git administrado y privado.", a: "AWS CodeCommit" },
+    { q: "Servicio de compilación e integración continua (CI).", a: "AWS CodeBuild" },
+    { q: "Servicio de despliegue automatizado a EC2, Lambda u on-premises.", a: "AWS CodeDeploy" },
+    { q: "Servicio de orquestación de pipelines CI/CD.", a: "AWS CodePipeline" },
+    { q: "Analiza aplicaciones distribuidas (microservicios) para detectar cuellos de botella y errores.", a: "AWS X-Ray" },
+    { q: "IDE basado en navegador para escribir, ejecutar y depurar código en la nube.", a: "AWS Cloud9" },
+
+    // ===== Customer Engagement =====
+    { q: "Centro de contacto en la nube (call center) administrado.", a: "Amazon Connect" },
+
+    // ===== Machine Learning =====
+    { q: "Plataforma completa para construir, entrenar y desplegar modelos de machine learning.", a: "Amazon SageMaker" },
+    { q: "Servicio de procesamiento de lenguaje natural (NLP) para extraer entidades, sentimientos y temas.", a: "Amazon Comprehend" },
+    { q: "Servicio para convertir texto a voz realista.", a: "Amazon Polly" },
+    { q: "Servicio de reconocimiento y análisis de imágenes y videos.", a: "Amazon Rekognition" },
+    { q: "Traducción automática de idiomas mediante ML.", a: "Amazon Translate" },
+    { q: "Servicio de transcripción automática de voz a texto.", a: "Amazon Transcribe" },
+    { q: "Chatbots conversacionales con voz y texto (motor detrás de Alexa).", a: "Amazon Lex" },
+
+    // ===== Conceptos Generales =====
+    { q: "Modelo donde AWS es responsable de la 'seguridad DE la nube' y el cliente de la 'seguridad EN la nube'.", a: "AWS Shared Responsibility Model" },
+    { q: "Ubicación geográfica con múltiples Availability Zones aisladas.", a: "AWS Region" },
+    { q: "Uno o más centros de datos discretos con alimentación, redes y conectividad redundantes dentro de una región.", a: "Availability Zone (AZ)" },
+    { q: "Ubicaciones de la red global de AWS donde CloudFront cachea contenido cerca de los usuarios.", a: "AWS Edge Locations" },
+    { q: "Capacidad de un sistema para escalar añadiendo más instancias del mismo tamaño.", a: "Horizontal Scaling (Scaling Out)" },
+    { q: "Capacidad de un sistema para escalar aumentando la potencia (CPU/RAM) de una instancia existente.", a: "Vertical Scaling (Scaling Up)" },
+    { q: "Capacidad de aprovisionar y liberar recursos automáticamente según la demanda.", a: "Elasticity" },
+    { q: "Diseñar sistemas que continúan operando ante fallos de componentes.", a: "Fault Tolerance / High Availability" },
+    { q: "Práctica de reducir las interdependencias entre componentes para que los fallos no se propaguen.", a: "Decoupling / Loose Coupling" },
+    { q: "Cambio de gasto de capital (CapEx) a gasto operativo (OpEx) al usar la nube.", a: "Cloud Economics: CapEx to OpEx" },
+    { q: "Modelo donde el proveedor administra el hardware y la virtualización; el cliente administra el SO y aplicaciones.", a: "IaaS (Infrastructure as a Service)" },
+    { q: "Modelo donde el proveedor administra plataformas de desarrollo y el cliente solo se enfoca en el código.", a: "PaaS (Platform as a Service)" },
+    { q: "Modelo donde el proveedor entrega aplicaciones completas accesibles desde internet.", a: "SaaS (Software as a Service)" },
+
+    // ===== Support Plans =====
+    { q: "Plan de soporte gratuito; incluye documentación, foros y AWS Trusted Advisor (checks básicos).", a: "AWS Basic Support" },
+    { q: "Plan de soporte para desarrolladores que experimentan con AWS; soporte por email en horario laboral.", a: "AWS Developer Support" },
+    { q: "Plan de soporte 24/7 para cargas de producción con respuesta < 1 hora para sistemas caídos.", a: "AWS Business Support" },
+    { q: "Plan de soporte premium con Technical Account Manager (TAM), Concierge y respuesta < 15 min.", a: "AWS Enterprise Support" },
+    { q: "Punto de contacto técnico principal y asesor proactivo en el plan Enterprise Support.", a: "Technical Account Manager (TAM)" },
+    { q: "Equipo de soporte para consultas de facturación y cuentas en el plan Enterprise.", a: "AWS Support Concierge" },
+    { q: "Asistencia de AWS para eventos planificados (lanzamientos, migraciones) que esperan altos picos de tráfico.", a: "AWS Infrastructure Event Management (IEM)" },
+    { q: "Equipo al que se reporta el uso malicioso de recursos AWS por parte de terceros.", a: "AWS Abuse Team" },
+
+    // ===== Marketplace & Partners =====
+    { q: "Catálogo digital donde los clientes pueden encontrar, comprar y desplegar software de terceros que funciona en AWS.", a: "AWS Marketplace" },
+    { q: "Programa global de socios que ofrecen servicios y soluciones basadas en AWS.", a: "AWS Partner Network (APN)" },
+    { q: "Equipo de consultoría de AWS que ayuda a clientes a lograr resultados específicos en su adopción de la nube.", a: "AWS Professional Services" }
+];

@@ -204,22 +204,4 @@ const dataQuiz = [
     }
 ];
 
-// Flashcards del Repaso Rápido
-const dataFlashcards = [
-    {
-        q: "Scaling 🆚 Elasticity",
-        a: "Escalar es inflar masa global de código para aguantar demanda extrema entrante sin explotar el app. Elasticidad implica inflarse, PERO INMEDIATAMENTE DES-INFLARSE (Menguar su ancho automatizado) liberando las máquinas que sobran a la madrugada de vuelta a Amazon para economizar con facturación real minuciosa base inteligente."
-    },
-    {
-        q: "¿De Quién diablos asume verdaderamente los Parcheos: EC2 cruda pura versus RDS de código AWS Autoadministrado profundo?",
-        a: "En la Instancia EC2 cruda de terminal, TÚ eres dueño único del terminal Linux puro y los parches. (Es Seguridad EN Cloud Culpable). Pero en una RDS base de datos lista administrada por Aws abstracta, ellos son quienes perióticamente actualizan y operativizan tus Backups base de parcheo SO oculto base general (Por su rol De Seguridad DE LA Cloud Responsable)."
-    },
-    {
-        q: "Identidad AWS I.A.M fundamental global universal",
-        a: "Obedece por innegociabilidad base oficial al 'Principio del Menor Privilegio Absoluto'. (Otorga como administrador humano apenas exactamente justo estricto e ínfimo el mínimo poder minúsculo al rol base útil sin entregar comandos mortales excedentes permitidos)."
-    },
-    {
-        q: "¿Sostenibilidad versus Eficiencia Máxima Del Motor Rendimiento Técnico Well-Architect?",
-        a: "Un motor Rindiente buscará utilizar tecnología de punta y la instancia de menor cuelo en RAM veloz base (Lanzando serverless inmedia). Sin embargo, un analista Sostenible sacrificará y meditará base a optimizar y colapsar servidores locales que operan malamente al pobre mínimo del 5%, llenándolos térmicamente al máximo 90% para prevenir prender de más granjas que contaminan inútilmente el mundo físico consumiendo voltajes sin carga térmica base utilizable pesada real base final."
-    }
-];
+// Flashcards: ahora se cargan desde js/data-flashcards.js (extraídas de la BD oficial)

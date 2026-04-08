@@ -4,20 +4,11 @@
 let curCardIdx = 0;
 let fcDeck = [];
 
-// Construye el mazo de flashcards a partir de la BD oficial de exámenes (dataExamsMaster)
+// Construye el mazo a partir de dataFlashcards (data-flashcards.js).
+// Mezcla aleatoria para variedad en cada sesión.
 function buildFlashcardsDeck() {
-    const source = (typeof dataExamsMaster !== 'undefined' && Array.isArray(dataExamsMaster)) ? dataExamsMaster : [];
-    fcDeck = source.map(item => {
-        const correctTexts = (item.answers || [])
-            .map(i => item.options[i])
-            .filter(Boolean)
-            .join("\n• ");
-        return {
-            q: item.q,
-            a: "• " + correctTexts
-        };
-    });
-    // Mezclar para variedad en cada sesión
+    const source = (typeof dataFlashcards !== 'undefined' && Array.isArray(dataFlashcards)) ? dataFlashcards : [];
+    fcDeck = source.slice();
     for (let i = fcDeck.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [fcDeck[i], fcDeck[j]] = [fcDeck[j], fcDeck[i]];
